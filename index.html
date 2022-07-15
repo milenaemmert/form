@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Diário Alimentar</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/form.css">
+	<link rel="stylesheet" href="assets/css/table.css">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<form>
+		<div class="container-large">
+			<div class="container-info">
+				<label for="inputFood">Alimento(s)</label>
+				<input type="text" name="food" id="inputFood" placeholder="ex: panqueca de banana (com nutella 🥺)">
+			</div>
+
+			<div class="container-info">
+				<label for="inputCalories">Calorias</label>
+				<input type="number" name="calories" id="inputCalories" placeholder="kcal">
+			</div>
+		</div>
+			
+		<fieldset>	
+			<label><input type="radio" name="meal" value="Café da manhã" checked>Café da manhã</label>
+			<label><input type="radio" name="meal" value="Almoço">Almoço</label>
+			<label><input type="radio" name="meal" value="Lanche">Lanche</label>
+			<label><input type="radio" name="meal" value="Jantar">Jantar</label>
+			<label><input type="radio" name="meal" value="Pré-treino">Pré-treino</label>
+			<label><input type="radio" name="meal" value="Pós-treino">Pós-treino</label>
+		</fieldset>	
+
+		<div class="container-large">
+			<div class="container-info">
+				<label class="label-bottle">
+					<input type="checkbox" name="water">
+					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
+				</label>
+				<label class="label-bottle">
+					<input type="checkbox" name="water">
+					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
+				</label>
+				<label class="label-bottle">
+					<input type="checkbox" name="water">
+					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
+				</label>
+				<label class="label-bottle">
+					<input type="checkbox" name="water">
+					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
+				</label>
+				<label class="label-bottle">
+					<input type="checkbox" name="water">
+					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
+				</label>
+			</div>
+			
+			<button type="submit" id="addButton">Adicionar</button>
+		</div>
+	</form>
+
+	<main>	
+		<table class="invisible">
+			<caption>Diário alimentar</caption>
+			<thead>
+				<tr>
+					<th class="table-titles">Alimento(s)</th>
+					<th class="table-titles">kcal</th>
+					<th class="table-titles">Refeição</th>
+				</tr>
+			</thead>
+			<tbody id="meal-table" ></tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3" class="table-titles" id="tdCaloriesConsumed"></td>
+				</tr>
+			</tfoot>
+		</table>
+	</main>
+
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/calc.js"></script>
+	<script src="assets/js/errors.js"></script>
+	<script src="assets/js/table.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 32px;
+    background-color: rgba(225, 58, 255, 0.34);
+    color: rgb(85, 85, 85)
+}
+
+.invisible {
+    display: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 0.5s;
+}

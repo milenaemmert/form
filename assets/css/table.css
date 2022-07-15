@@ -1,0 +1,29 @@
+main {
+    margin: 24px auto;
+    width: 720px;
+}
+
+caption {
+    font-size: 1.5em;
+    color: rgb(225, 58, 255);
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border: rgba(225, 58, 255, 0.252) solid 1px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 16px;
+}
+
+td, th {
+	padding: .7em;
+    border: rgba(225, 58, 255, 0.252) solid 1px;
+	text-align: center;
+}
+
+.table-titles {
+    font-weight: 600;
+}
