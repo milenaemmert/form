@@ -17,8 +17,8 @@ form.addEventListener('submit', (e) => {
     table.parentElement.classList.remove('invisible')
     table.appendChild(tr)
     
-    setCaloriesConsumed(infos)
-
+    setConsumed(infos)
+    
     form.reset()
 })
 
