@@ -6,7 +6,8 @@ const arrayTotalWater = []
 bottles.forEach(elem => {
     elem.addEventListener('click', () => {
         let drankWater
-        if(elem.src == 'http://127.0.0.1:5501/assets/imgs/bottle.png') {
+        const srcImg = elem.getAttribute('src')
+        if(srcImg.includes('assets/imgs/bottle.png')) {
             elem.setAttribute('src', 'assets/imgs/empty-bottle.png')
             drankWater = true
             const amountOfWater = trackWater(drankWater)
