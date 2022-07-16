@@ -8,14 +8,25 @@ function createTr(infos) {
     return tr
 }
 
-function createTd(dado) {
+function createTd(data) {
     var td = document.createElement('td')
-    td.textContent = dado
+    td.textContent = data
 
     return td
 }
 
-function setCaloriesConsumed(infos) {
+function setConsumed(infos) {
     const tdCaloriesConsumed = document.querySelector('#tdCaloriesConsumed')
     tdCaloriesConsumed.innerText = `Calorias consumidas: ${calculateCalories(infos)} kcal`
 }
+
+function setWaterConsumed(amountOfWater) {
+    const tdWaterConsumed = document.querySelector('#tdWaterConsumed')
+    
+    if(amountOfWater == 0) {
+        tdWaterConsumed.innerText = `Beba água!`
+    } else {
+        tdWaterConsumed.innerText = `Água ingerida: ${amountOfWater} ml`
+    }
+}
+
