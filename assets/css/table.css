@@ -24,6 +24,22 @@ td, th {
 	text-align: center;
 }
 
+.th-food {
+    max-width: 50%;
+}
+
+.th-kcal {
+    width: 12%;
+}
+
+.th-meal {
+    width: 38%;
+}
+
+tfoot tr td{   
+    border: none;
+}
+
 .table-titles {
     font-weight: 600;
 }
