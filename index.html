@@ -36,26 +36,11 @@
 
 		<div class="container-large">
 			<div class="container-info">
-				<label class="label-bottle">
-					<input type="checkbox" name="water">
-					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
-				</label>
-				<label class="label-bottle">
-					<input type="checkbox" name="water">
-					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
-				</label>
-				<label class="label-bottle">
-					<input type="checkbox" name="water">
-					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
-				</label>
-				<label class="label-bottle">
-					<input type="checkbox" name="water">
-					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
-				</label>
-				<label class="label-bottle">
-					<input type="checkbox" name="water">
-					<img src="assets/imgs/bottle.png" alt="Garrafa de água.">
-				</label>
+				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">		
+				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">			
+				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">		
+				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">		
+				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">				
 			</div>
 			
 			<button type="submit" id="addButton">Adicionar</button>
@@ -75,7 +60,8 @@
 			<tbody id="meal-table" ></tbody>
 			<tfoot>
 				<tr>
-					<td colspan="3" class="table-titles" id="tdCaloriesConsumed"></td>
+					<td colspan="2" class="table-titles" id="tdCaloriesConsumed" width="50%"></td>
+					<td colspan="2" class="table-titles" id="tdWaterConsumed" width="50%">Beba água!</td>
 				</tr>
 			</tfoot>
 		</table>
@@ -85,5 +71,6 @@
 	<script src="assets/js/calc.js"></script>
 	<script src="assets/js/errors.js"></script>
 	<script src="assets/js/table.js"></script>
+	<script src="assets/js/water.js"></script>
 </body>
 </html>
