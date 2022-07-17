@@ -28,6 +28,6 @@ function trackWater(arg) {
 }
 
 function calculateWater(arrayTotalWater) {
-    amountOfWater = arrayTotalWater.reduce((ml, i) => { return ml + i })
+    amountOfWater = arrayTotalWater.reduce((ml, i) => ml + i )
     return amountOfWater
 }
