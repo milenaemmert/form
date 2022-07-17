@@ -11,3 +11,11 @@ function validateInputs(form) {
 
     return arrayErrors.join('\n')
 }
+
+const inputCalories = document.querySelector('#inputCalories')
+inputCalories.onkeypress = (e) => {
+    const charCode = e.charCode ? e.charCode : e.keyCode   
+    if (inputCalories.value.length >= 4 || (charCode >= 43 && charCode <= 46) || charCode == 101) {
+        return false
+    }
+}
