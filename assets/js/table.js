@@ -10,8 +10,7 @@ function createTr(infos) {
 
 function createTd(data) {
     var td = document.createElement('td')
-    td.textContent = data
-
+    td.textContent = data.charAt(0).toUpperCase() + data.substr(1)
     return td
 }
 
