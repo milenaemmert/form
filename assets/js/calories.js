@@ -11,4 +11,9 @@ function calculateCalories(infos) {
     return totalCalories
 }
 
-    
+function removeCalories(infos) {
+    let calorieByMeal = parseInt(infos.calories)
+    totalCalories -= calorieByMeal
+
+    return totalCalories
+}

@@ -3,7 +3,7 @@ const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
     e.preventDefault()  
     
-    const infos = getInfos(form)     
+    const infos = getInfos(form)
     
     const errors = validateInputs(form)
     if(errors.length > 0) {
@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     table.parentElement.classList.remove('invisible')
     table.appendChild(tr)
     
-    setConsumed(infos)
+    setConsumed(infos, calculateCalories) 
     
     form.reset()
 })

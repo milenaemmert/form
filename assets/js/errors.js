@@ -19,3 +19,11 @@ inputCalories.onkeypress = (e) => {
         return false
     }
 }
+
+function checkIfTableContainsTr() {
+    const trs = document.querySelector('#meal-table')
+    if((trs.children.length - 1) == 0) {
+        const table = document.querySelector('table')
+        table.classList.add('invisible')
+    } 
+}
