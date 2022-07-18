@@ -23,6 +23,14 @@
 				<label for="inputCalories">Calorias</label>
 				<input type="number" name="calories" id="inputCalories" placeholder="kcal">
 			</div>
+			
+			<button type="button" id="searchButton" class="hide"><img src="assets/imgs/search.png" alt="Ícone de busca."></button>
+		</div>
+		
+		<div class="container-search invisible">
+			<input type="search" id="inputSearch">
+			<button type="button" id="searchAPI">Buscar</button>
+			<div id="responseText"></div>
 		</div>
 			
 		<fieldset>	
@@ -72,5 +80,6 @@
 	<script src="assets/js/errors.js"></script>
 	<script src="assets/js/table.js"></script>
 	<script src="assets/js/water.js"></script>
+	<script src="assets/js/search.js"></script>
 </body>
 </html>
