@@ -5,7 +5,7 @@ function createTr(infos) {
     tr.appendChild(createTd(infos.calories))
     tr.appendChild(createTd(infos.meal))
 
-    tr.lastElementChild.classList.add('td-delete')
+    tr.lastElementChild.classList.add('td__delete')
     const containerDelete = createDeleteIcon()
     tr.lastElementChild.appendChild(containerDelete)
 
@@ -24,7 +24,7 @@ function createTr(infos) {
 
 function createDeleteIcon() {
     const containerDelete = document.createElement('div')
-    containerDelete.innerHTML = '<img id="imgDelete" src="assets/imgs/delete.png" alt="Botão de deletar." class="delete">'
+    containerDelete.innerHTML = '<img id="imgDelete" src="assets/imgs/delete.png" alt="Botão de deletar." class="button__delete">'
 
     return containerDelete
 }
