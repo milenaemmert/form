@@ -5,32 +5,43 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Diário Alimentar</title>
+	<link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/form.css">
 	<link rel="stylesheet" href="assets/css/table.css">
-	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<form>
-		<div class="container-large">
-			<div class="container-info">
+	<form>	
+		<div class="container__large">
+			<div class="container__small">
 				<label for="inputFood">Alimento(s)</label>
 				<input type="text" name="food" id="inputFood" maxlength="40" placeholder="ex: panqueca de banana (com nutella 🥺)">
 			</div>
 
-			<div class="container-info">
+			<div class="container__small">
 				<label for="inputCalories">Calorias</label>
 				<input type="number" name="calories" id="inputCalories" placeholder="kcal">
 			</div>
 			
-			<button type="button" id="searchButton" class="hide"><img src="assets/imgs/search.png" alt="Ícone de busca."></button>
+			<div class="container__small">
+				<button type="button" id="searchButton" class="button__small"><img src="assets/imgs/search.png" alt="Ícone de busca."></button>
+			</div>
 		</div>
 		
-		<div class="container-search invisible">
-			<input type="search" id="inputSearch">
-			<button type="button" id="searchAPI">Buscar</button>
-			<div id="responseText"></div>
+		<div class="container__large invisible">
+			<div class="container__small container__search">
+				<input type="search" class="inputSearch" placeholder="buscar">
+
+				<div class="container__small">
+					<button type="button" id="searchAPI" class="button__small"><img src="assets/imgs/search.png" alt="Ícone de busca."></button>
+				</div>
+			</div>
+
+			<div class="container__small container__result">
+				<p id="responseText">Procure por um alimento ao lado.</p>
+			</div>
 		</div>
 			
 		<fieldset>	
@@ -40,10 +51,10 @@
 			<label><input type="radio" name="meal" value="Jantar">Jantar</label>
 			<label><input type="radio" name="meal" value="Pré-treino">Pré-treino</label>
 			<label><input type="radio" name="meal" value="Pós-treino">Pós-treino</label>
-		</fieldset>	
+		</fieldset>
 
-		<div class="container-large">
-			<div class="container-info">
+		<div class="container__large">
+			<div class="container__small">
 				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">		
 				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">			
 				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">		
@@ -51,7 +62,7 @@
 				<img src="assets/imgs/bottle.png" alt="Garrafa de água." class="water">				
 			</div>
 			
-			<button type="submit" id="addButton">Adicionar</button>
+			<button type="submit" id="addButton" class="button__large">Adicionar</button>
 		</div>
 	</form>
 
