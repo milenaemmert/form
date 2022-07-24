@@ -1,19 +1,53 @@
 const searchButton = document.querySelector('#searchButton')
+const exitButton = document.querySelector('#exitButton')
+searchButton.addEventListener('click', openContainer)
+exitButton.addEventListener('click', closeContainer)
 
-searchButton.addEventListener('click', () => {
-    const containerSearch = document.querySelector('.container-search')
-    containerSearch.classList.remove('invisible')
+function openContainer() {
+    searchButton.classList.add('invisible')
+    exitButton.classList.remove('invisible')
+    const searchAndResultContainer = document.querySelector('#searchAndResultContainer')
+    searchAndResultContainer.classList.remove('invisible')
+}
 
-    const hideElement = document.querySelector('.hide') 
-    hideElement.style.display = 'none' //nao consegui aplicar classList em algo com display flex *pesquisar depois*
-    
+function closeContainer() {
+    searchButton.classList.remove('invisible')
+    exitButton.classList.add('invisible')
+    searchAndResultContainer.classList.add('invisible')
+    inputSearch.value = ''
+    responseText.innerText = 'Procure por um alimento ao lado.'
+}
+
+const searchButtonAPI = document.querySelector('#searchButtonAPI')
+searchButtonAPI.addEventListener('click', () => {
+    const inputSearch = document.querySelector('#inputSearch').value.toLowerCase()   
+
+    if (inputSearch == '') {
+        checkSearch(document.querySelector('#inputSearch'))
+    }
+
+    requestAPI(inputSearch)
 })
 
-/*
-const searchAPI = document.querySelector('#searchAPI')
-searchAPI.addEventListener('click', () => {
-    const inputSearch = document.querySelector('#inputSearch').value
+function requestAPI(inputSearch) {
     const xhr = new XMLHttpRequest()
+    xhr.open('GET', `http://localhost:3000/food?name=${inputSearch}`)
 
-    => problema com CORS
-}) */
+    xhr.addEventListener('load', () => {
+        const responseText = document.querySelector('#responseText')
+        const response = JSON.parse(xhr.responseText)
+
+        response.find(elem => {
+            if(inputSearch == elem.name)  {
+                responseText.innerText = `${elem.amount}: ${elem.name} (${elem.calories} kcal)`
+            } 
+        })
+
+        if(response.length === 0 || inputSearch.length === 0) {
+            responseText.innerText = 'Tente novamente.'
+            checkSearch(responseText.parentElement)
+        }
+    })
+
+    xhr.send()
+}

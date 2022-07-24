@@ -94,11 +94,11 @@ input[type="radio"] {
 
 .button__small img {
     width: 16px;
-    transition: 0.2s transform;
+    transition: 0.1s transform;
 }
 
 .button__small img:hover {
-    transform: rotate(45deg);
+    transform: rotate(15deg);
 }
 
 button, .button__large {
@@ -119,4 +119,10 @@ button:hover {
 
 button:focus {
     outline: rgb(225, 58, 255) solid 2px;
+}
+
+.not-found {
+    outline: rgb(225, 58, 255) solid 4px;
+    opacity: 0.5;
+    transition: 0.25s;
 }

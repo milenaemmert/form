@@ -27,3 +27,10 @@ function checkIfTableContainsTr() {
         table.classList.add('invisible')
     } 
 }
+
+function checkSearch(e) {
+    e.classList.add('not-found')
+    setTimeout(function(){
+        e.classList.remove('not-found')
+    }, 200) 
+} 
