@@ -39,7 +39,7 @@ function requestAPI(inputSearch) {
 
         response.find(elem => {
             if(inputSearch == elem.name)  {
-                responseText.innerText = `${elem.amount}: ${elem.name} (${elem.calories} kcal)`
+                responseText.innerText = `${elem.name.toUpperCase()}: ${elem.calories} kcal (${elem.amount})`
             } 
         })
 
